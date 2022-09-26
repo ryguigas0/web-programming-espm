@@ -4,14 +4,14 @@ O repositório da matéria de Web Pogramming na ESPM
 
 ## Minhas páginas web
 
-- [Portfolio](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex1_portfolio/)
-- [Receita](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex2_receita/)
-- [Anos 90](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex3_90s_website/)
-- [Site profissional](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex3_professional_website/)
-- [Site empresarial](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex4_enterprise_website/)
-- [Portfolio profissional](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex5_professional_porfolio/)
-- [Prova 1](https://ryguigas0.github.io/espm/web-programming/frontend/tests/test1/)
-- [Exercícios de Javascript](https://ryguigas0.github.io/espm/web-programming/frontend/exercises/ex7_javascript_problems/)
+- [Portfolio](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex1_portfolio/)
+- [Receita](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex2_receita/)
+- [Anos 90](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex3_90s_website/)
+- [Site profissional](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex3_professional_website/)
+- [Site empresarial](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex4_enterprise_website/)
+- [Portfolio profissional](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex5_professional_porfolio/)
+- [Prova 1](https://ryguigas0.github.io/web-programming-espm/frontend/tests/test1/)
+- [Exercícios de Javascript](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex7_javascript_problems/)
 
 ## Ferramentas usadas
 
