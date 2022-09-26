@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,600&family=Poppins&display=swap");
+
+:root {
+  font-family: "Jost", sans-serif;
+  --background-color: #00000062;
+  --button1-primary-color: #8b049c;
+  --button1-secondary-color: white;
+  --button2-primary-color: #0096d1;
+  --button2-secondary-color: white;
+  --button3-primary-color: #ff411f;
+  --button3-secondary-color: white;
+  --button4-primary-color: #108b85;
+  --button4-secondary-color: white;
+}
+
+.responsive-background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fading-dark-background {
+  background-color: var(--background-color);
+  background-blend-mode: color;
+}
+
+/* .fading-dark-background:hover {
+  background-color: #46464662;
+  background-blend-mode: color;
+} */
+
+.center-content {
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.limitador {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.pill-button {
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 2em 1em;
+  cursor: pointer;
+  border-radius: 1rem;
+  /* border-style: solid;
+  border-width: 0.2rem; */
+}
+
+button.button1 {
+  background-color: var(--button1-primary-color);
+  color: var(--button1-secondary-color);
+}
+
+button.button1:hover {
+  background-color: var(--button1-secondary-color);
+  color: var(--button1-primary-color);
+}
+
+button.button2 {
+  background-color: var(--button2-primary-color);
+  color: var(--button2-secondary-color);
+}
+
+button.button2:hover {
+  background-color: var(--button2-secondary-color);
+  color: var(--button2-primary-color);
+}
+
+button.button3 {
+  background-color: var(--button3-primary-color);
+  color: var(--button3-secondary-color);
+}
+
+button.button3:hover {
+  background-color: var(--button3-secondary-color);
+  color: var(--button3-primary-color);
+}
+
+button.button4 {
+  background-color: var(--button4-primary-color);
+  color: var(--button4-secondary-color);
+}
+
+button.button4:hover {
+  background-color: var(--button4-secondary-color);
+  color: var(--button4-primary-color);
+}
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.segment1 {
+  background-image: url(./fundo1.jpg);
+  color: cornsilk;
+  justify-content: center;
+  align-items: center;
+}
+
+.segment2 {
+  background-image: url(./fundo2.jpg);
+  color: cornsilk;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.segment3 {
+  background-image: url(./fundo3.jpg);
+  color: cornsilk;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.segment4 {
+  background-image: url(./fundo4.png);
+  color: cornsilk;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.column {
+  padding: 2em;
+  text-align: left;
+}
+
+.column.info {
+  max-width: 16rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.about {
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contact {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contact > .material-icons {
+  color: lightseagreen;
+}
+
+.column {
+  padding: 3rem;
+}
+
+.link-wrapper {
+  min-width: max-content;
+  padding: 0.6rem;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}

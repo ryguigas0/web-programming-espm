@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "app": "tsc app.ts && node app"
+  },
+  "keywords": [],
+  "author": "Guilherme Oliveira Casagrande",
+  "license": "MIT"
+}

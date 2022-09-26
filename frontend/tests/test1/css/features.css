@@ -1,0 +1,40 @@
+.features {
+  flex-direction: column;
+}
+
+.features .title {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.features .title p {
+  max-width: 32rem;
+  font-size: 1.4rem;
+}
+
+.card-row .card {
+  padding: 2rem;
+}
+
+.card .material-icons {
+  font-size: 5rem;
+  color: tomato;
+}
+
+.card .card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.card .card-link {
+  text-decoration: none;
+  color: rgb(80, 124, 126);
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.card .card-link:hover {
+  color: rgb(40, 61, 63);
+}

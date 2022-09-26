@@ -1,0 +1,59 @@
+.portfolio {
+  flex-direction: column;
+  background-color: ghostwhite;
+  padding: 1em;
+}
+
+.portfolio-title {
+  font-size: 4rem;
+  max-height: fit-content;
+  margin: 0;
+}
+
+.portfolio-description {
+  word-wrap: normal;
+  margin: auto 0;
+  font-weight: 100;
+  font-size: 1rem;
+  max-width: 70%;
+  color: rgb(161, 161, 161);
+}
+
+.banner-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  max-width: 32rem;
+  min-height: 27rem;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.banner.background-image2 {
+  background-size: cover;
+  background-position: 20% 50%;
+}
+
+.banner.background-image3 {
+  background-position: center;
+  background-size: cover;
+}
+
+.banner.background-image4 {
+  background-position: 45%;
+  background-size: cover;
+}
+
+.banner-category {
+  font-size: 0.8rem;
+}
+
+.banner-title {
+  font-size: 1rem;
+}

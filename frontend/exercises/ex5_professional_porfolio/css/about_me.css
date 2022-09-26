@@ -1,0 +1,19 @@
+.about-me {
+  height: fit-content;
+}
+
+.about-me > * {
+  padding: 3rem;
+}
+
+.me-img {
+  max-height: 24rem;
+}
+
+.info {
+  height: fit-content;
+}
+
+.info > h2 {
+  font-size: 1rem;
+}

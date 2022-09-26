@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+:root {
+  --link-color: #8a7d8a;
+  --link-selected-color: #b8a9b8;
+  --bread-crumbs-bg: #eed9ee;
+  --primary-color: #ffa500;
+  --primary-color-light: #ffbb00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.limitador {
+  max-width: 1400px;
+  margin: 0 auto 0 auto;
+}
+
+/* Faz ocupar 100% do elemento pai -> se for uma div ela se auto regula */
+img {
+  max-width: 100%;
+}
+
+.logo {
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+.navbar {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--link-color);
+}
+
+.navbar > a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.navbar > a:hover {
+  color: var(--link-selected-color);
+}
+
+.bread-crumbs {
+  background-color: var(--bread-crumbs-bg);
+  padding: 10px;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-content > h2 {
+  color: var(--primary-color);
+}
+
+.main-content > h3 {
+  color: var(--primary-color-light);
+}
+
+.recipe-title {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.recipe-image {
+  text-align: center;
+}

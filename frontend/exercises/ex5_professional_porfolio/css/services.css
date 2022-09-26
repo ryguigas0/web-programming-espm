@@ -1,0 +1,44 @@
+.services {
+  flex-direction: column;
+  align-items: center;
+}
+
+.services > h1 {
+  margin-bottom: 0;
+}
+
+.services > .subtitle {
+  color: gray;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-wrapper > .card-row {
+  display: flex;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 14rem;
+
+  border-radius: 13%;
+
+  background-color: aliceblue;
+}
+
+.card > .card-icon > .material-icons {
+  font-size: 48px;
+}
+
+.card > .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}

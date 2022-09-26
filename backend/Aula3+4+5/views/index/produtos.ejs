@@ -1,0 +1,13 @@
+<h1>Sou a página de produtos!</h1>
+
+<p>Listagem de produtos</p>
+
+<div class="card-row">
+  <% for(let i = 0; i < products.length; i++ ) { %>
+  <div class="card">
+    <h2>NOME: <%= products[i].name %></h2>
+    <div>ID: <%= products[i].id %></div>
+    <div>DESCRIÇÃO: <%= products[i].description %></div>
+  </div>
+  <% } %>
+</div>

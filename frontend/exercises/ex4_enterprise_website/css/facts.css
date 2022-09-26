@@ -1,0 +1,36 @@
+.facts {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.facts > h1 {
+  padding-top: 3rem;
+}
+
+.fact-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fact {
+  padding: 2rem;
+  max-width: 21rem;
+}
+
+.fact > h1 {
+  font-size: 6em;
+  margin-bottom: 0;
+}
+
+.fact-about {
+  font-size: large;
+  font-size: 1rem;
+}
+
+/* .fact-about {
+  font-size: 0.8rem;
+  font-weight: 100;
+  max-width: 10rem;
+} */

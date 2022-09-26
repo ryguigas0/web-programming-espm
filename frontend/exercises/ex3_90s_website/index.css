@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+img {
+  width: 100%;
+}
+
+.img-wrapper {
+  width: 32rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Silkscreen";
+  color: aliceblue;
+  background-image: url("fundo\ maneiro.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.limitador {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 25px;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.pink {
+  color: pink;
+}
+
+.orange {
+  color: orange;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.yellow {
+  color: yellow;
+}

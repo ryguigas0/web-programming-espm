@@ -1,0 +1,7 @@
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8%;
+    padding: 1.2rem;
+}

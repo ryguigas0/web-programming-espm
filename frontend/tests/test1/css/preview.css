@@ -1,0 +1,17 @@
+.preview {
+  flex-direction: column;
+}
+
+.preview .title-wrapper {
+    padding: 1rem;
+}
+
+.preview .image-wrapper .image-container {
+  width: 48rem;
+}
+
+.preview .image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

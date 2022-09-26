@@ -1,0 +1,33 @@
+.info {
+  flex-direction: row;
+  background-color: black;
+  color: white;
+}
+
+.info-board {
+  padding: 1rem;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-column .info-card {
+  padding: 1rem;
+}
+
+.info-column .info-card .info-card-title {
+  font-size: 1.6rem;
+}
+
+.info-column .info-card .info-card-content {
+  color: silver;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}

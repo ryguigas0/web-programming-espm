@@ -1,0 +1,21 @@
+.introduction {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+  background-image: url("../public/me_better.jpeg");
+  background-color: rgb(114, 114, 114);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: left;
+  background-position-y: center;
+}
+
+.introduction > .content {
+  color: white;
+  margin: 3rem;
+  height: fit-content;
+  width: 24rem;
+}

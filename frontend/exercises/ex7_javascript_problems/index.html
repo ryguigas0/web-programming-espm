@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios de JavaScript</title>
+    <script src="./js/ex1.js"></script>
+    <script src="./js/viceCampeao.js"></script>
+    <script src="./js/corrida.js"></script>
+    <script src="./js/pedagio.js"></script>
+    <script src="./js/avioes.js"></script>
+  </head>
+  <body>
+    <h1>Ex 7 - Problemas de JavaScript</h1>
+    <div>
+      <h2>Lista 1</h2>
+      <div>
+        <h3>Exercício 1</h3>
+        <div>
+          <label for="num-a">Numero A</label>
+          <input type="number" name="Numero A" id="num-a" />
+        </div>
+        <div>
+          <label for="num-b">Numero B</label>
+          <input type="number" name="Numero B" id="num-b" />
+        </div>
+        <div>
+          <button onclick="ex1Calcular()">Calcular</button>
+        </div>
+        <div>
+          <span id="resultado">A diferença entre o maior e o menor é: </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Lista OBI se-senão</h2>
+      <div>
+        <h3>VICE-CAMPEÃO</h3>
+        <div>
+          <label for="input-vice-campeao">ENTRADA</label>
+          <input
+            type="text"
+            name="Entrada de dados"
+            id="input"
+            placeholder="4 5 6"
+          />
+          <div>
+            <button onclick="viceCampeao()">Resolver</button>
+          </div>
+          <div>SAÍDA: <span id="output-vice-campeao"></span></div>
+        </div>
+      </div>
+      <div>
+        <h3>CORRIDA</h3>
+        <div>
+          <label for="input-corrida">ENTRADA</label>
+          <input
+            type="text"
+            name="Entrada de dados"
+            id="input-corrida"
+            placeholder="7000 100"
+          />
+          <div>
+            <button onclick="corrida()">Resolver</button>
+          </div>
+          <div>SAÍDA: <span id="output-corrida"></span></div>
+        </div>
+      </div>
+      <div>
+        <h3>PEDÁGIO</h3>
+        <div>
+          <label for="input-pedagio">ENTRADA 1</label>
+          <input
+            type="text"
+            name="Entrada de dados"
+            id="input-pedagio1"
+            placeholder="111 37"
+          />
+          <label for="input-pedagio">ENTRADA 2</label>
+          <input
+            type="text"
+            name="Entrada de dados"
+            id="input-pedagio2"
+            placeholder="1 10"
+          />
+          <div>
+            <button onclick="pedagio()">Resolver</button>
+          </div>
+          <div>SAÍDA: <span id="output-pedagio"></span></div>
+        </div>
+      </div>
+      <div>
+        <h3>AVIÕES DE PAPEL</h3>
+        <div>
+          <label for="input-avioes">ENTRADA 1</label>
+          <input
+            type="text"
+            name="Entrada de dados"
+            id="input-avioes"
+            placeholder="10 100 10"
+          />
+          <div>
+            <button onclick="avioes()">Resolver</button>
+          </div>
+          <div>SAÍDA: <span id="output-avioes"></span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
