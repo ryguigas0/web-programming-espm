@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+</head>
+
+<body>
+
+	<h1>Teste</h1>
+	<div id="divPai">
+	</div>
+
+	<button type="button" onclick="calcular()">
+		Calcular
+	</button>
+
+	<script>
+		async function calcular() { // async -> a função é isolada para processar em paralelo -> não congela o site
+			debugger
+
+			try { // try -> tente rodar esse código, e pegue os erros
+				// fetch retorna uma promise -> um objeto que corresponde a um retorno que não roda síncrono na internet
+				// await -> Espera o retorno dessa função
+				let resposta = await fetch("https://academico.espm.br/testeapi/listar");
+
+				if (!resposta.ok) {
+					alert("Erro pegando os dados")
+				}
+
+				let dadosDoBanco = await resposta.json();
+				let table = document.getElementById("data-table")
+
+				let html = `
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nome</th>
+								<th>E-mail</th>
+							</tr>
+						</thead>
+						<tbody>
+				`;
+
+				for (let i = 0; i < dadosDoBanco.length; i++) {
+
+					let pessoa = dadosDoBanco[i];
+
+					html += `
+							<tr>
+								<td>${pessoa.id}</td>
+								<td>${pessoa.nome}</td>
+								<td>${pessoa.email}</td>
+							</tr>
+					`;
+				}
+
+				html += `
+						</tbody>
+					</table>
+				`;
+
+				divPai.innerHTML = html;
+			} catch (ex) { // catch -> o que é pra fazer se eu pegar algum erro
+				alert(`ERROR: ${ex.message}`)
+			}
+
+		}
+
+	</script>
+</body>
+
+</html>
