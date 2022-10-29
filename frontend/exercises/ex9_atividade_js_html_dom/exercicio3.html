@@ -20,8 +20,64 @@
 <body>
     <h1>Atividade JS + HTML + DOM - Exercício 3</h1>
 
-    <script>
+    <button onclick="preencherTabela()">Preencher tabela</button>
 
+    <table id="tabela-pessoas">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Idade</th>
+            <th>Cargo</th>
+        </tr>
+        <tbody id="tabela-pessoas-dados">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        const pessoasTableBody = document.querySelector("#tabela-pessoas-dados")
+        function preencherTabela() {
+
+            let nomes = [
+                "Guilherme", "Felipe", "Fabiana", "Joana",
+                "Frederico", "Rodrigo", "Leonardo", "Ana Laura",
+                "Julia", "Anastásia"]
+
+            let startID = pessoasTableBody.childElementCount;
+
+            for (let i = 0; i < nomes.length; i++) {
+                let id = startID + i;
+
+                let nome = nomes[i];
+
+                let idade = Math.floor(Math.random() * 10 + 15);
+
+                let email = `${nome.toLowerCase() + idade}@cool.mail`
+
+                let cargo = ""
+
+                if (idade == 15) {
+                    cargo = "Prodigio(a)"
+                } else if (idade > 15 && idade < 20) {
+                    cargo = "Web Dev Junior"
+                } else if (idade >= 20) {
+                    cargo = "Web Dev Pleno"
+                }
+
+                pessoasTableBody.innerHTML += `
+                <tr>
+                    <td>${id}</td>
+                    <td>${nome}</td>
+                    <td>${email}</td>
+                    <td>${idade}</td>
+                    <td>${cargo}</td>
+                </tr>   
+                `
+
+            }
+        }
     </script>
 </body>
 
