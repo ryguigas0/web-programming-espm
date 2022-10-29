@@ -8,11 +8,25 @@
     <title>Atividade JS + HTML + DOM - Exercício 2</title>
     <style>
         body {
-            text-align: center;
+            text-align: left;
         }
 
         div {
             margin: 20px;
+        }
+
+        .teclado {
+            display: grid;
+            grid-template-columns: repeat(3, 30px);
+            grid-template-rows: repeat(4, 20px);
+            gap: 5px;
+        }
+
+        #tecla-enviar {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
         }
     </style>
 </head>
@@ -20,9 +34,43 @@
 <body>
     <h1>Atividade JS + HTML + DOM - Exercício 2</h1>
 
-    <script>
+    <div>
+        <label for="password-input">Senha: </label>
+        <input type="number" id="password-input" name="password-input">
+        <div class="teclado">
+            <button id="tecla-1" onclick="appendNumber(1)">1</button>
+            <button id="tecla-2" onclick="appendNumber(2)">2</button>
+            <button id="tecla-3" onclick="appendNumber(3)">3</button>
+            <button id="tecla-4" onclick="appendNumber(4)">4</button>
+            <button id="tecla-5" onclick="appendNumber(5)">5</button>
+            <button id="tecla-6" onclick="appendNumber(6)">6</button>
+            <button id="tecla-7" onclick="appendNumber(7)">7</button>
+            <button id="tecla-8" onclick="appendNumber(8)">8</button>
+            <button id="tecla-9" onclick="appendNumber(9)">9</button>
+            <button id="tecla-0" onclick="appendNumber(0)">0</button>
+            <button id="tecla-enviar" onclick="validarSenha()">Validar</button>
+        </div>
+    </div>
 
+    <script>
+        const passwordInput = document.querySelector("#password-input")
+
+        function appendNumber(number) {
+            passwordInput.value += `${number}`
+        }
+
+        function validarSenha() {
+            const resultadoDiv = document.querySelector("#resultado")
+            let password = passwordInput.value
+            if (password === "1234") {
+                resultadoDiv.textContent = "Acesso autorizado"
+            } else {
+                resultadoDiv.textContent = "Senha incorreta, tente novamente"
+            }
+        }
     </script>
+
+    <div id="resultado"></div>
 </body>
 
 </html>
