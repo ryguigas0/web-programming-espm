@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Final HTML + JS + DOM - Exercício 1</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_pt_BR.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .input-wrapper>input {
+            max-width: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Atividade Final HTML + JS + DOM - Exercício 1</h1>
+
+    <form action="" id="form-salvar-jogo">
+        <div class="input-wrapper">
+            <label for="jogo-nome">Nome do jogo:</label>
+            <input type="text" id="jogo-nome" name="jogo-nome" value="Jogo sem nome">
+        </div>
+
+        <div class="input-wrapper">
+            <label for="jogo-produtora">Nome da produtora do jogo:</label>
+            <input type="text" id="jogo-produtora" name="jogo-produtora" value="Produtra de fachada">
+        </div>
+
+        <div class="input-wrapper">
+            <label for="jogo-ano">Ano de lançamento do jogo:</label>
+            <input type="number" name="jogo-ano" id="jogo-ano" value="2022">
+        </div>
+
+        <div class="input-wrapper">
+            <label for="jogo-idade-minima">Idade mínima para jogar o jogo:</label>
+            <input type="number" name="jogo-idade-minima" id="jogo-idade-minima" value="1">
+        </div>
+
+        <div class="input-wrapper">
+            <label for="jogo-descricao">Descrição do jogo</label>
+            <textarea name="jogo-descricao" id="jogo-descricao" cols="30" rows="10">Talvez ilegal
+            </textarea>
+        </div>
+
+        <button type="submit">Salvar na nuvem</button>
+    </form>
+
+    <script>
+        $("#form-salvar-jogo").validate({
+            rules: {
+                "jogo-nome": {
+                    required: true
+                },
+                "jogo-produtora": {
+                    required: true
+                },
+                "jogo-idade-minima": {
+                    required: true,
+                    range: [1, 100]
+                },
+                "jogo-descricao": {
+                    required: false
+                },
+                "jogo-ano": {
+                    required: true,
+                    range: [1958, new Date().getFullYear()]
+                },
+            },
+            submitHandler: function (form) {
+                enviarJogo()
+            }
+        })
+
+
+        async function enviarJogo() {
+            const nome = $("#jogo-nome").prop("value")
+            const nomeProdutora = $("#jogo-produtora").prop("value")
+            const descricao = $("#jogo-descricao").prop("value")
+            const ano = Number.parseInt($("#jogo-ano").prop("value"))
+            const idadeMinima = Number.parseInt($("#jogo-idade-minima").prop("value"))
+
+            let jogo = {
+                "nome": nome,
+                "produtora": nomeProdutora,
+                "descricao": descricao,
+                "ano": ano,
+                "idadeMinima": idadeMinima
+            }
+
+
+            try {
+                let opcoes = {
+                    method: "POST",
+                    body: JSON.stringify(jogo),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                };
+
+                let resposta = await fetch("https://academico.espm.br/testeapi/jogo/criar", opcoes);
+
+                if (!resposta.ok) {
+                    alert("Erro salvando jogo na nuvem...");
+                } else {
+                    alert("Jogo salvo com sucesso na nuvem!");
+                }
+            } catch (excecao) {
+                alert("Mensagem de erro: " + excecao.message);
+            }
+        }
+    </script>
+</body>
+
+</html>
