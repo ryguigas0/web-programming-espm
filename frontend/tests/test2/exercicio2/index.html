@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade Final HTML + JS + DOM - Exercício 2</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Atividade Final HTML + JS + DOM - Exercício 2</h1>
+    <h2>Tabela de jogos</h2>
+    <table id="tabela-jogos">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Produtora</th>
+            <th>Ano</th>
+            <th>Idade mínima para jogar</th>
+        </tr>
+    </table>
+    <script>
+        async function listarJogos() {
+            let response = await fetch("https://academico.espm.br/testeapi/jogo/listar")
+            if (!response.ok) {
+                alert("Erro buscando jogos na nuvem")
+                return
+            }
+
+            let listaJogos = await response.json()
+
+            const tabelaJogos = document.querySelector("#tabela-jogos")
+            for (let i = 0; i < listaJogos.length; i++) {
+                const jogoHTML = toHTMLStr(listaJogos[i])
+                tabelaJogos.innerHTML += jogoHTML
+            }
+        }
+
+        function toHTMLStr(jogo) {
+            return `
+            <tr>
+                <td>${jogo.id}</td>
+                <td>${jogo.nome}</td>
+                <td>${jogo.descricao}</td>
+                <td>${jogo.produtora}</td>
+                <td>${jogo.ano}</td>
+                <td>${jogo.idadeMinima}</td>
+            </tr>
+            `
+        }
+
+        listarJogos()
+    </script>
 </body>
+
 </html>
