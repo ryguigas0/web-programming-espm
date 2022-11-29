@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Final HTML + JS + DOM - Exercício 3</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atividade Final HTML + JS + DOM - Exercício 3</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_pt_BR.min.js"></script>
+	<style>
+		body {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.input-wrapper {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+		}
+
+		.pontuacao-min {
+			width: fit-content;
+		}
+
+		.competidores {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.calculadora {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
 </head>
+
 <body>
-    <h1>Atividade Final HTML + JS + DOM - Exercício 3</h1>
+	<h1>Atividade Final HTML + JS + DOM - Exercício 3</h1>
+	<form id="calculadora" class="calculadora">
+		<div class="input-wrapper pontuacao-min">
+			<label for="pontuacao-min">
+				<h2>Pontuação mínima</h2>
+			</label>
+			<input type="number" id="pontuacao-min" name="pontuacao-min">
+		</div>
+		<h2>Competidores</h2>
+		<div id="resultado"></div>
+		<div class="competidores" id="competidores">
+		</div>
+		<div>
+			<button type="submit">Calcular</button>
+		</div>
+	</form>
+
+	<script>
+		const quantidadeCompetidores = 8
+
+		const compeditoresForm = document.querySelector("#competidores")
+
+		for (let i = 1; i <= quantidadeCompetidores; i++) {
+			compeditoresForm.innerHTML += `
+            <div class="input-wrapper">
+                <h3>Competidor ${i}</h3>
+                <label for="nota1-competidor${i}">Nota prova 1:</label>
+        		<input type="number" name="nota1-competidor${i}" id="nota1-competidor${i}">
+        		<label for="nota2-competidor${i}">Nota prova 2:</label>
+        		<input type="number" name="nota2-competidor${i}" id="nota2-competidor${i}">
+    		</div>`
+		}
+
+		let rules = {
+			"pontuacao-min": {
+				required: true,
+				min: 1
+			}
+		}
+
+		for (let i = 1; i <= quantidadeCompetidores; i++) {
+			rules[`nota1-competidor${i}`] = {
+				required: true,
+				min: 0
+			}
+
+			rules[`nota2-competidor${i}`] = {
+				required: true,
+				min: 0
+			}
+		}
+
+		$("#calculadora").validate({
+			rules: rules,
+			submitHandler: function (form) {
+				calcularResultado()
+			}
+		})
+
+		function calcularResultado() {
+			const pontuacaoMin = Number.parseInt($("#pontuacao-min").prop("value"))
+			let countPassou = 0
+			for (let i = 1; i <= quantidadeCompetidores; i++) {
+				let nota1 = Number.parseInt($(`#nota1-competidor${i}`).prop("value"))
+				let nota2 = Number.parseInt($(`#nota2-competidor${i}`).prop("value"))
+
+				if ((nota1 + nota2) >= pontuacaoMin) {
+					countPassou++
+				}
+			}
+			document.querySelector("#resultado").innerHTML = `Dos ${quantidadeCompetidores} passaram ${countPassou} competidores!`
+		}
+	</script>
 </body>
+
 </html>
