@@ -12,9 +12,12 @@ O repositório da matéria de Web Pogramming na ESPM
 - [Portfolio profissional](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex5_professional_porfolio/)
 - [Prova 1](https://ryguigas0.github.io/web-programming-espm/frontend/tests/test1/)
 - [Exercícios de Javascript](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex7_javascript_problems/)
-- [Exercício 1 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio1)
-- [Exercício 2 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio2)
-- [Exercício 3 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio3)
+- [Exerício 9 - Exercício 1 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio1)
+- [Exercício 9 - Exercício 2 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio2)
+- [Exercício 9 - Exercício 3 de JS + HTML + DOM](https://ryguigas0.github.io/web-programming-espm/frontend/exercises/ex9_atividade_js_html_dom/exercicio3)
+- [Atividade 2 - Exercício 1](https://ryguigas0.github.io/web-programming-espm/frontend/tests/test2/exercicio1/)
+- [Atividade 2 - Exercício 2](https://ryguigas0.github.io/web-programming-espm/frontend/tests/test2/exercicio2/)
+- [Atividade 2 - Exercício 3](https://ryguigas0.github.io/web-programming-espm/frontend/tests/test2/exercicio3/)
 
 ## Ferramentas usadas
 
